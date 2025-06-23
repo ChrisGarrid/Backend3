@@ -18,13 +18,11 @@ Este repositorio contiene la API del proyecto final para el curso de desarrollo 
 
 ### 1. Clonar el repositorio
 
-```bash
+
 git clone https://github.com/tuusuario/micelio-backend.git
 cd micelio-backend
 2. Instalar dependencias
-bash
-Copiar
-Editar
+
 npm install
 3. Configurar archivo .env
 env
@@ -35,28 +33,20 @@ MONGO_URI=mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/Micelio
 
 🚀 Ejecución del proyecto
 Modo local
-bash
-Copiar
-Editar
+
 npm start
 Modo Docker
 Construir imagen:
 
-bash
-Copiar
-Editar
+
 docker build -t micelio-backend .
 Ejecutar contenedor:
 
-bash
-Copiar
-Editar
+
 docker run -p 3000:3000 --env-file .env micelio-backend
 Si usas WSL 2 en Windows y tu CPU es AMD64, puede requerir:
 
-bash
-Copiar
-Editar
+
 docker buildx build --platform linux/amd64 --tag micelio-backend .
 docker run --platform linux/amd64 -p 3000:3000 --env-file .env micelio-backend
 
@@ -75,9 +65,7 @@ Todos fueron verificados mediante pruebas funcionales en Postman con éxito (có
 📘 Documentación de API (Swagger)
 Disponible al ejecutar el servidor:
 
-bash
-Copiar
-Editar
+
 http://localhost:3000/api-docs
 Incluye documentación para todos los endpoints principales.
 
@@ -86,9 +74,7 @@ Archivo Dockerfile incluido.
 
 Para asegurar compatibilidad multiplataforma (especialmente en Windows con WSL 2), se utilizó:
 
-bash
-Copiar
-Editar
+
 docker buildx build --platform linux/amd64 -t micelio-backend .
 ✅ Checklist de entrega
 Requisito	Estado
